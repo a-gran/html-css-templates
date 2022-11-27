@@ -5,11 +5,14 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- настройка для резиновой верстки content="width=device-width -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- настройки для более удобной адаптивной верстки 
+	initial-scale=1.0, maximum-scale=1.0, user-scalable=0 - запрет на изменение масштаба -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<!-- фиксированная верстка -->
 	<!--<meta name="viewport" content="width=1200px">-->
 	<title>Layouts</title>
-	<link rel="stylesheet" href="layouts.css">
+	<!-- подключение media-запроса с отдельным файлом стилей в .html -->
+	<link rel="stylesheet" media="screen and (color)" href="layouts.css">
 </head>
 
 <body>
