@@ -1,11 +1,12 @@
 /*Обнуление*/
-*,*:before,*:after{
+*, *:before, *:after{
 	padding: 0;
 	margin: 0;
 	border: 0;
 	box-sizing: border-box;
 }
-html,body{
+
+html, body {
 	height: 100%;
 	background-color: #333;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -13,7 +14,8 @@ html,body{
 	font-size: 16px;
 	line-height: 24px;
 }
-a{
+
+a {
 	text-decoration: none;
 }
 
@@ -23,12 +25,13 @@ a{
 }
 
 /* Основные стили */
-.content{
+.content {
 	max-width: 1330px;
 	margin: 0px auto;
 	padding: 50px 15px;
 }
-.title{
+
+.title {
 	margin: 0px 0px 20px 0px;
 	font-size: 30px;
 }
@@ -37,16 +40,23 @@ a{
 .text {
 	margin: 0px 0px 80px 0px;
 }
+
 /* Контейнер картинки */
 .text__image {
 	margin: 0px 0px 20px 0px;
 	text-align: center;
 }
+
 /* Картинка */
 .text__image img{
-	max-width: 100%;
+	max-width: 100%; /* картинки будут занимать свой изначальный размер, но при уменьшении пропорционально уменьшаться, занимая 100% родительского контейнера*/
+	/*width: 100%; будет занимать 100% контейнера, даже если размер самой картинки изначально меньше родительского контейнеар */
 }
-.text__value {}
+
+.text__value {
+
+}
+
 .text__value p{
 	margin: 0px 0px 20px 0px;
 }
@@ -55,15 +65,19 @@ a{
 .cards {
 	margin: 0px 0 70px 0;
 }
+
 .cards__row{
 	margin: 0px -15px 70px -15px;
 	display: flex;
 }
+
 .cards__column {
 	flex: 0 1 33.333%;
 	padding: 0px 15px;
 }
+
 .cards__item {
+
 }
 
 /* Контейнер картинки */
@@ -71,34 +85,47 @@ a{
 	margin: 0px 0px 20px 0px;
 	padding: 0px 0px 58% 0px;
 	overflow: hidden;
-	position: relative;
+	position: relative; /* позиционирование */
 }
+
 /* Картинка */
-.cards__image img{
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	position: absolute;
+.cards__image img {
+	width: 100%; /* 100% ширины родительского контейнера */
+	height: 100%; /* 100% высоты родительского контейнера */
+	object-fit: cover; /* центрирование изображения */
+	position: absolute; /* позиционирование изображения относительно первого родительского спозиционированного  объекта от его левого верхнего края */
+	/*object-position: center; позиционирование*/
 	top: 0;
 	left: 0;
 }
+
 .cards__body {
 	
 }
 
 /* Картинки в карточке №2 */
-.items {}
+.items {
+
+}
+
 .items__item {
 	display: flex;
 	margin: 0px 0px 30px 0px;
 }
+
 /* Контейнер картинки */
+/* Отзывчивая ширина и высота */
 .items__image {
-	flex: 0 0 33.333%;
+	flex-basis: 33.333%; /* минимальная базовая ширина колонки */
+	flex-grow: 0;
+	flex-shrink: 0;
+	/*flex: 0 0 33.333%;*/
 	position: relative;
-	min-height: 150px;
+	min-height: 150px; /* чтобы картинка адекватно смотрелась, если совсем мало контента справа */
 }
+
 /* Картинка */
+/* Сделать высоту изображения такую же, как контент по высоте */
 .items__image img{
 	width: 100%;
 	height: 100%;
@@ -112,12 +139,14 @@ a{
 	flex: 1 1 auto;
 	padding: 0px 0px 0px 30px;
 }
+
 .items__label {
 	font-size: 20px;
 	font-weight: 700;
 	display: inline-block;
 	margin: 0px 0px 20px 0px;
 }
+
 .items__text {
 	
 }
